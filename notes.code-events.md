@@ -1,8 +1,6 @@
-# Notes
+# Code Events
 
-## V8 code sections
-
-### Code Events
+### Internal Code Events
 
 - [code-events.h](https://cs.chromium.org/chromium/src/v8/src/code-events.h?q=code-creation&sq=package:chromium&g=0&l=28)
   - mainly interesting:
@@ -243,3 +241,10 @@ int Shell::Main(int argc, char* argv[]) {
   // [ .. ]
 }
 ```
+
+### Comparing with Deoptigate
+
+This gives us similar optimization results to what we get with deoptigate, our timestamps were
+off by 34ms, but once we adjust that the relationship becomes clear:
+
+![compare](./img/deoptigate-compare.png)
